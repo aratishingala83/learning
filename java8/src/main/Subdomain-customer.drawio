@@ -1,1 +1,34 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T14:43:03.339Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.6.0" etag="okDDSiJO2XqDH9Klu5JF" type="github"><diagram id="-RRau8YOYGwkRGxvEpdG">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-12-06T15:21:42.604Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.6.0" etag="iDFvD7Tqkt50tsk2GGip" type="github">
+  <diagram id="c6JLvSxhbYfYdat7HCSK" name="Page-1">
+    <mxGraphModel dx="3533" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-5" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-790" y="60" width="400" height="950" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="-3" width="400" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-3" value="Customer management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="-4" y="510" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-4" value="a) Register customer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="10" y="50" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-6" value="b) Update customer / kyc" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="10" y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-7" value="c) Add payment method to load wallet" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="10" y="170" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-8" value="d) Link billpayment customer account (3rd party customer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="10" y="230" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aU-5JYxauHx9QPA6MI9r-9" value="d) Delink billpayment customer account (3rd party customer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="aU-5JYxauHx9QPA6MI9r-5">
+          <mxGeometry x="6" y="320" width="200" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
