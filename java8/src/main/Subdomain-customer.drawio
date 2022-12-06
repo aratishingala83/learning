@@ -1,226 +1,226 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T18:22:48.710Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="NOWahv0X_kP9WlFF59va" version="20.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-06T18:50:29.606Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="l29Ep_wSXCToB63biXHE" version="20.6.0" type="github">
   <diagram id="c6JLvSxhbYfYdat7HCSK" name="Page-1">
     <mxGraphModel dx="5187" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-9" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-9" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-1742" y="40" width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-2" value="Customer management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-2" value="Customer management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="72.12121212121212" y="20" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-3" value="a) Register customer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-3" value="a) Register customer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="55.63636363636363" y="100" width="206.06060606060606" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-4" value="b) Update customer / kyc" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-4" value="b) Update customer / kyc" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="55.63636363636363" y="160" width="206.06060606060606" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-5" value="c) Add payment method to load wallet" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-5" value="c) Add payment method to load wallet" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="55.63636363636363" y="220" width="206.06060606060606" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-6" value="d) Link billpayment customer account (3rd party customer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-6" value="d) Link billpayment customer account (3rd party customer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="55.63636363636363" y="280" width="206.06060606060606" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-7" value="d) Delink billpayment customer account (3rd party customer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-7" value="d) Delink billpayment customer account (3rd party customer)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="51.515151515151516" y="370" width="206.06060606060606" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-49" value="e) audit of operation like reg. customer, update customer etc&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-9">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-49" value="e) audit of operation like reg. customer, update customer etc&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-9" vertex="1">
           <mxGeometry x="51.51999999999998" y="480" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-1320" y="40" width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-11" value="Account management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-11" value="Account management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1270" y="60" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-12" value="a) Create account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-12" value="a) Create account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="140" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-13" value="b) Credit to account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-13" value="b) Credit to account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="190" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-14" value="c) debit from account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-14" value="c) debit from account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="240" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-15" value="d) debit limit/ temp. suspend account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-15" value="d) debit limit/ temp. suspend account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="290" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-16" value="e) close account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-16" value="e) close account" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="350" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-17" value="f) view passbook/statement" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-17" value="f) view passbook/statement" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="410" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-48" value="g) audit of operation like credit/debit/view statemet etc&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-48" value="g) audit of operation like credit/debit/view statemet etc&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1287" y="460" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-58" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-58" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-480" y="40" width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-25" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-25" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-34" value="Payment management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-34" value="Payment management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry x="40" y="30" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-35" value="a) payment to biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-35" value="a) payment to biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry x="50" y="90" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-36" value="b) payment to customer wallet" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-36" value="b) payment to customer wallet" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry x="50" y="150" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-37" value="c) biller -&amp;nbsp; transaction history" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-37" value="c) biller -&amp;nbsp; transaction history" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry x="50" y="210" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-38" value="d) customer - transaction history" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-38" value="d) customer - transaction history" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry x="50" y="270" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-39" value="e) generate biller wise transaction report for each day (file as per business requirement for reconciliation)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-58">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-39" value="e) generate biller wise transaction report for each day (file as per business requirement for reconciliation)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-58" vertex="1">
           <mxGeometry x="50" y="340" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-60" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-60" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-900" y="40" width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-60">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;" parent="Tp-uuH1HGJ1IqLCPa1Vi-60" vertex="1">
           <mxGeometry width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-20" value="Biller management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-60">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-20" value="Biller management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-60" vertex="1">
           <mxGeometry x="59" y="20" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-21" value="a) On boarding of biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-60">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-21" value="a) On boarding of biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-60" vertex="1">
           <mxGeometry x="59" y="70" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-22" value="b) Update biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-60">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-22" value="b) Update biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-60" vertex="1">
           <mxGeometry x="58" y="120" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-23" value="c) Off boarding of biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-60">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-23" value="c) Off boarding of biller" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-60" vertex="1">
           <mxGeometry x="59" y="170" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-24" value="d) List of billers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-60">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-24" value="d) List of billers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-60" vertex="1">
           <mxGeometry x="59" y="220" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-61" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-61" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-40" y="40" width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-42" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-61">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-42" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" parent="Tp-uuH1HGJ1IqLCPa1Vi-61" vertex="1">
           <mxGeometry width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-43" value="Notification management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-61">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-43" value="Notification management" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-61" vertex="1">
           <mxGeometry x="60" y="30" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-44" value="a) sms notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-61">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-44" value="a) sms notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-61" vertex="1">
           <mxGeometry x="60" y="100" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-45" value="b) email notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-61">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-45" value="b) email notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-61" vertex="1">
           <mxGeometry x="60" y="150" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-46" value="c) push notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-61">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-46" value="c) push notification" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-61" vertex="1">
           <mxGeometry x="60" y="200" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-62" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-62" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="380" y="40" width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-52" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-52" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" parent="Tp-uuH1HGJ1IqLCPa1Vi-62" vertex="1">
           <mxGeometry width="340" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-53" value="Batch Payment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-53" value="Batch Payment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-62" vertex="1">
           <mxGeometry x="47" y="30" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-54" value="a) Schedule batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-54" value="a) Schedule batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-62" vertex="1">
           <mxGeometry x="45" y="70" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-55" value="b) Disable batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-55" value="b) Disable batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-62" vertex="1">
           <mxGeometry x="45" y="120" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-56" value="c) Update batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-56" value="c) Update batch" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-62" vertex="1">
           <mxGeometry x="47" y="170" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-57" value="d) list all schedule batch and configuration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-57" value="d) list all schedule batch and configuration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-62" vertex="1">
           <mxGeometry x="45" y="230" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-64" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-64" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="-1742" y="650" width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-74" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;redis - for in mem cache&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;&lt;br&gt;DB : mongoDB 6.x" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-74" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;redis - for in mem cache&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;&lt;br&gt;DB : mongoDB 6.x" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1700" y="690" width="230" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-75" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-75" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="1" vertex="1">
           <mxGeometry x="-1710.308787878788" y="660" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-80" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-80" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-1317" y="650" width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-76" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-80">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-76" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="Tp-uuH1HGJ1IqLCPa1Vi-80" vertex="1">
           <mxGeometry width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-78" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-80">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-78" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-80" vertex="1">
           <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-79" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-80">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-79" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-80" vertex="1">
           <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-81" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-81" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-886" y="650" width="320" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-82" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-81">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-82" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="Tp-uuH1HGJ1IqLCPa1Vi-81" vertex="1">
           <mxGeometry width="320" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-83" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;redis - for in mem cache&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : mongoDB 6.x" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-81">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-83" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;redis - for in mem cache&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : mongoDB 6.x" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-81" vertex="1">
           <mxGeometry x="27.951807228915662" y="40" width="221.6867469879518" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-84" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-81">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-84" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-81" vertex="1">
           <mxGeometry x="34.52646951442104" y="10" width="208.54326396495068" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-85" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-85" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-480" y="650" width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-86" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-85">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-86" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="Tp-uuH1HGJ1IqLCPa1Vi-85" vertex="1">
           <mxGeometry width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-87" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-85">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-87" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-85" vertex="1">
           <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-88" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-85">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-88" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-85" vertex="1">
           <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-89" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-89" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-40" y="650" width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-90" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-89">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-90" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="Tp-uuH1HGJ1IqLCPa1Vi-89" vertex="1">
           <mxGeometry width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-91" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-89">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-91" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-89" vertex="1">
           <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-92" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-89">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-92" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-89" vertex="1">
           <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-93" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-93" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="380" y="650" width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-94" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-94" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="Tp-uuH1HGJ1IqLCPa1Vi-93" vertex="1">
           <mxGeometry width="332" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-95" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (&lt;u style=&quot;&quot;&gt;spring batch, Spring scheduler with ShedLock,&amp;nbsp;&lt;/u&gt;spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-95" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (&lt;u style=&quot;&quot;&gt;spring batch, Spring scheduler with ShedLock,&amp;nbsp;&lt;/u&gt;spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-93" vertex="1">
           <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-96" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-96" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" parent="Tp-uuH1HGJ1IqLCPa1Vi-93" vertex="1">
           <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-104" value="" style="shape=card;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-104" value="" style="shape=card;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" parent="1" vertex="1">
           <mxGeometry x="-1730" y="970" width="2450" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-106" value="Security - &lt;br&gt;&amp;nbsp;-&amp;gt; Transport layer through TLS 1.3&lt;br&gt;-&amp;gt;&amp;nbsp; Message layer we should use pub/private key using aes256&lt;br&gt;-&amp;gt; Inside the database also critical information like username, password, payment method, biller data should be store in encrypted manner so no one can directly see through query as well.&lt;br&gt;-&amp;gt; Use auditing for each and every activity&amp;nbsp;&lt;br&gt;-&amp;gt; Database server should be reside in most secured zone and ips have specific range etc can access that DB (this is also through application etc)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-106" value="Security - &lt;br&gt;&amp;nbsp;-&amp;gt; Transport layer through TLS 1.3&lt;br&gt;-&amp;gt;&amp;nbsp; Message layer we should use pub/private key using aes256&lt;br&gt;-&amp;gt; Inside the database also critical information like username, password, payment method, biller data should be store in encrypted manner so no one can directly see through query as well.&lt;br&gt;-&amp;gt; Use auditing for each and every activity&amp;nbsp;&lt;br&gt;-&amp;gt; Database server should be reside in most secured zone and ips have specific range etc can access that DB (this is also through application etc)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" parent="1" vertex="1">
           <mxGeometry x="-1700" y="985" width="550" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-110" value="Other component&amp;nbsp; -&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;Spring cloud library like sleuth for distributed tracing along with zipkin, spring config server or configuration management, zuul api gateway&amp;nbsp;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-110" value="Other component&amp;nbsp; -&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;Spring cloud library like sleuth for distributed tracing along with zipkin, spring config server or configuration management, zuul api gateway&amp;nbsp;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" parent="1" vertex="1">
           <mxGeometry x="-1020" y="985" width="230" height="165" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-111" value="Hosting env -&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;Solaris 11 - OS&amp;nbsp;&lt;br&gt;&lt;br&gt;CPU - Payment, Account, Batch payment need more CPU compare to other component&lt;br&gt;RAM - As mention above we need more RAM for specified component&lt;br&gt;Disk space - Payment, account module need more discspace compare to other modules&lt;br&gt;This can be further depedns on what kind of tps we want&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-111" value="Hosting env -&amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&lt;br&gt;Solaris 11 - OS&amp;nbsp;&lt;br&gt;&lt;br&gt;CPU - Payment, Account, Batch payment need more CPU compare to other component&lt;br&gt;RAM - As mention above we need more RAM for specified component&lt;br&gt;Disk space - Payment, account module need more discspace compare to other modules&lt;br&gt;This can be further depedns on what kind of tps we want&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" parent="1" vertex="1">
           <mxGeometry x="-710" y="985" width="370" height="225" as="geometry" />
         </mxCell>
       </root>
