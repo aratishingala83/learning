@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T17:43:12.822Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="nyqfJIPtTQwEVjK2whu4" version="20.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-06T17:57:13.717Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="dohhElr3qpVCcbg3J1sa" version="20.6.0" type="github">
   <diagram id="c6JLvSxhbYfYdat7HCSK" name="Page-1">
     <mxGraphModel dx="5187" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -141,6 +141,75 @@
         </mxCell>
         <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-57" value="d) list all schedule batch and configuration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-62">
           <mxGeometry x="45" y="230" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-64" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-1742" y="650" width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-74" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : mongoDB 6.x" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="-1700" y="690" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-75" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="1">
+          <mxGeometry x="-1710.308787878788" y="660" width="216.36363636363635" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-80" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-1317" y="650" width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-76" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-80">
+          <mxGeometry width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-78" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-80">
+          <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-79" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-80">
+          <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-81" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-886" y="650" width="320" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-82" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-81">
+          <mxGeometry width="320" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-83" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : mongoDB 6.x" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-81">
+          <mxGeometry x="27.951807228915662" y="40" width="221.6867469879518" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-84" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-81">
+          <mxGeometry x="34.52646951442104" y="10" width="208.54326396495068" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-85" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-480" y="650" width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-86" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-85">
+          <mxGeometry width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-87" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-85">
+          <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-88" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-85">
+          <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-89" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-40" y="650" width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-90" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-89">
+          <mxGeometry width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-91" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-89">
+          <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-92" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-89">
+          <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-93" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="380" y="650" width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-94" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
+          <mxGeometry width="332" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-95" value="Backend : Java 17&lt;br&gt;Spring framework 6.x (&lt;u style=&quot;&quot;&gt;spring batch,&lt;/u&gt;spring boot, spring cloud library and server-less - default tomcat embedded)&lt;br&gt;kafka&lt;br&gt;&lt;br&gt;UI side - ReactJS 18.x&lt;br&gt;&lt;br&gt;DB : oracle 21c" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
+          <mxGeometry x="29" y="40" width="230" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-96" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
+          <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
