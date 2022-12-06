@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T18:03:51.664Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="oyyXMALPNiSHZ3pUKFMr" version="20.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-06T18:13:31.594Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="_zZmNH48OALykSRrVr9P" version="20.6.0" type="github">
   <diagram id="c6JLvSxhbYfYdat7HCSK" name="Page-1">
     <mxGraphModel dx="5187" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -211,8 +211,14 @@
         <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-96" value="Tech stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0000CC;" vertex="1" parent="Tp-uuH1HGJ1IqLCPa1Vi-93">
           <mxGeometry x="35.82121212121183" y="10" width="216.36363636363635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-103" value="&lt;font color=&quot;#3333ff&quot; style=&quot;font-size: 14px;&quot;&gt;Spring cloud library like sleuth for distributed tracing along with zipkin, spring config server or configuration management, zuul api gateway&amp;nbsp;&lt;/font&gt;" style="shape=card;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-103" value="&lt;font color=&quot;#3333ff&quot; style=&quot;font-size: 14px;&quot;&gt;Spring cloud library like sleuth for distributed tracing along with zipkin, spring config server or configuration management, zuul api gateway&amp;nbsp;&lt;/font&gt;" style="shape=card;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="-1742" y="980" width="332" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-104" value="" style="shape=card;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-1320" y="970" width="2040" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Tp-uuH1HGJ1IqLCPa1Vi-106" value="Security - &lt;br&gt;&amp;nbsp;-&amp;gt; Transport layer through TLS 1.3&lt;br&gt;-&amp;gt;&amp;nbsp; Message layer we should use pub/private key using aes256&lt;br&gt;-&amp;gt; Inside the database also critical information like username, password, payment method, biller data should be store in encrypted manner so no one can directly see through query as well.&lt;br&gt;-&amp;gt; Use auditing for each and every activity&amp;nbsp;&lt;br&gt;-&amp;gt; Database server should be reside in most secured zone and ips have specific range etc can access that DB (this is also through application etc)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#3333FF;" vertex="1" parent="1">
+          <mxGeometry x="-1280" y="990" width="550" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
