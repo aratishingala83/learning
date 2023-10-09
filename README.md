@@ -1,12 +1,11 @@
-# learning
-learning
-
-
 import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+
+import java.io.IOException;
 
 public class AsyncHttpClientExample {
     public static void main(String[] args) throws Exception {
@@ -14,86 +13,74 @@ public class AsyncHttpClientExample {
 
         // First API Call
         HttpGet request1 = new HttpGet("https://example.com/api/resource1");
-        httpclient.execute(request1, new FutureCallback<HttpResponse>() {
+        httpclient.execute(request1, new FutureCallback<CloseableHttpResponse>() {
             @Override
-            public void completed(HttpResponse response1) {
-                // Process response1
+            public void completed(CloseableHttpResponse response1) {
+                try {
+                    // Process response1
 
-                // Second API Call (dependent on response1)
-                HttpGet request2 = new HttpGet("https://example.com/api/resource2");
-                httpclient.execute(request2, new FutureCallback<HttpResponse>() {
-                    @Override
-                    public void completed(HttpResponse response2) {
-                        // Process response2
+                    // Close response1 when you're done with it
+                    response1.close();
 
-                        // Third API Call (dependent on response2)
-                        HttpGet request3 = new HttpGet("https://example.com/api/resource3");
-                        httpclient.execute(request3, new FutureCallback<HttpResponse>() {
-                            @Override
-                            public void completed(HttpResponse response3) {
-                                // Process response3
+                    // Second API Call (dependent on response1)
+                    HttpGet request2 = new HttpGet("https://example.com/api/resource2");
+                    httpclient.execute(request2, new FutureCallback<CloseableHttpResponse>() {
+                        @Override
+                        public void completed(CloseableHttpResponse response2) {
+                            try {
+                                // Process response2
 
-                                // Fourth API Call (dependent on response3)
-                                HttpGet request4 = new HttpGet("https://example.com/api/resource4");
-                                httpclient.execute(request4, new FutureCallback<HttpResponse>() {
+                                // Close response2 when you're done with it
+                                response2.close();
+
+                                // Third API Call (dependent on response2)
+                                HttpGet request3 = new HttpGet("https://example.com/api/resource3");
+                                httpclient.execute(request3, new FutureCallback<CloseableHttpResponse>() {
                                     @Override
-                                    public void completed(HttpResponse response4) {
-                                        // Process response4
+                                    public void completed(CloseableHttpResponse response3) {
+                                        try {
+                                            // Process response3
 
-                                        // All API calls completed, you can now handle the final result
+                                            // Close response3 when you're done with it
+                                            response3.close();
+
+                                            // Fourth API Call (dependent on response3)
+                                            HttpGet request4 = new HttpGet("https://example.com/api/resource4");
+                                            httpclient.execute(request4, new FutureCallback<CloseableHttpResponse>() {
+                                                @Override
+                                                public void completed(CloseableHttpResponse response4) {
+                                                    try {
+                                                        // Process response4
+
+                                                        // Close response4 when you're done with it
+                                                        response4.close();
+
+                                                        // All API calls completed, you can now handle the final result
+                                                    } catch (IOException e) {
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void failed(Exception ex) {
+                                                    // Handle errors for the fourth API call
+                                                }
+
+                                                @Override
+                                                public void cancelled() {
+                                                    // Handle cancellation for the fourth API call
+                                                }
+                                            });
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
                                     }
 
                                     @Override
                                     public void failed(Exception ex) {
-                                        // Handle errors for the fourth API call
+                                        // Handle errors for the third API call
                                     }
 
                                     @Override
                                     public void cancelled() {
-                                        // Handle cancellation for the fourth API call
-                                    }
-                                });
-                            }
-
-                            @Override
-                            public void failed(Exception ex) {
-                                // Handle errors for the third API call
-                            }
-
-                            @Override
-                            public void cancelled() {
-                                // Handle cancellation for the third API call
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void failed(Exception ex) {
-                        // Handle errors for the second API call
-                    }
-
-                    @Override
-                    public void cancelled() {
-                        // Handle cancellation for the second API call
-                    }
-                });
-            }
-
-            @Override
-            public void failed(Exception ex) {
-                // Handle errors for the first API call
-            }
-
-            @Override
-            public void cancelled() {
-                // Handle cancellation for the first API call
-            }
-        });
-
-        // Do other work here while waiting for API calls to complete asynchronously
-
-        // Close the HttpClient when you're done
-        httpclient.close();
-    }
-}
-
+                                       
