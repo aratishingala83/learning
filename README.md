@@ -3,7 +3,31 @@
 
 
 
+<dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.3.10</version> <!-- Use the appropriate version -->
+    </dependency>
 
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.13</version>
+    </dependency>
+
+      <!-- Jackson Core -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.12.5</version> <!-- Use the appropriate version -->
+      </dependency>
+
+      <!-- Jackson DataBind -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.12.5</version> <!-- Use the appropriate version -->
+      </dependency>
 
 
 
