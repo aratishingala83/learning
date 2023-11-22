@@ -1,67 +1,67 @@
-import org.springframework.retry.RetryContext;
-import org.springframework.retry.policy.SimpleRetryPolicy;
-
-public class CustomRetryPolicy extends SimpleRetryPolicy {
-
-    public CustomRetryPolicy() {
-        super();
-        setMaxAttempts(3); // Set the maximum number of retry attempts
-    }
-
-    @Override
-    public boolean canRetry(RetryContext context) {
-        // Customize the conditions for retrying, e.g., based on exception type
-        return super.canRetry(context) && (context.getLastThrowable() instanceof TokenExpiredException);
-    }
-}
-
-
-public class TokenExpiredException extends RuntimeException {
-
-    public TokenExpiredException(String message) {
-        super(message);
-    }
-}
-
-
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.retry.backoff.ExponentialBackOffPolicy;
-import org.springframework.retry.support.RetryTemplate;
+import org.springframework.http.HttpRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.client.ClientHttpRequestExecution;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-@Configuration
-public class RestTemplateConfig {
+import java.io.IOException;
 
-    @Bean
-    public RestTemplate restTemplate() {
-        RestTemplate restTemplate = new RestTemplate();
+public class RetryInterceptor implements ClientHttpRequestInterceptor {
 
-        // Set a custom response error handler
-        restTemplate.setErrorHandler(new CustomResponseErrorHandler());
+    private static final int MAX_RETRIES = 3;
 
-        // Set a retry template with exponential back-off policy
-        restTemplate.setRetryTemplate(createRetryTemplate());
+    @Override
+    public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
+        int retryCount = 0;
+        do {
+            try {
+                return execution.execute(request, body);
+            } catch (HttpClientErrorException e) {
+                // Check for conditions to retry, e.g., token expiration
+                if (e.getStatusCode() == HttpStatus.UNAUTHORIZED) {
+                    // Update token or perform other retry-related logic
+                    updateToken();
+                } else {
+                    throw e; // Rethrow if it's not a condition to retry
+                }
+            } catch (IOException e) {
+                if (++retryCount >= MAX_RETRIES) {
+                    throw e; // Max retries reached
+                }
+                // Optionally log or perform other retry-related logic
+            }
+        } while (retryCount < MAX_RETRIES);
 
-        return restTemplate;
+        throw new IOException("Max retries reached");
     }
 
-    private RetryTemplate createRetryTemplate() {
-        RetryTemplate retryTemplate = new RetryTemplate();
+    private void updateToken() {
+        // Logic to refresh the token
+        // ...
+    }
 
-        // Set the retry policy
-        CustomRetryPolicy retryPolicy = new CustomRetryPolicy();
-        retryTemplate.setRetryPolicy(retryPolicy);
+    public static void main(String[] args) {
+        // Your initial headers with the current token
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", "Bearer YOUR_INITIAL_TOKEN");
 
-        // Set the back-off policy (exponential back-off)
-        ExponentialBackOffPolicy backOffPolicy = new ExponentialBackOffPolicy();
-        backOffPolicy.setInitialInterval(1000);
-        backOffPolicy.setMaxInterval(30000);
-        backOffPolicy.setMultiplier(2);
-        retryTemplate.setBackOffPolicy(backOffPolicy);
+        // Your API endpoint URL
+        String url = "YOUR_API_ENDPOINT_URL";
 
-        return retryTemplate;
+        // Create a custom RestTemplate with the retry interceptor
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.setInterceptors(Collections.singletonList(new RetryInterceptor()));
+
+        // Perform a request using the custom RestTemplate
+        try {
+            String response = restTemplate.postForObject(url, null, String.class);
+            System.out.println("Response: " + response);
+            // Process the response as needed
+        } catch (HttpClientErrorException e) {
+            e.printStackTrace();
+            // Handle exceptions (e.g., token expiration)
+        }
     }
 }
-
