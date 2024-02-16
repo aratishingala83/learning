@@ -3,18 +3,11 @@ import org.apache.poi.ss.usermodel.*;
 public class CheckMergedCellsInRow {
 
 
-public static boolean rowHasMergedCells(Sheet sheet, int rowIndex) {
-        Row row = sheet.getRow(rowIndex);
-        if (row != null) {
-            int lastCellNum = row.getLastCellNum();
-            for (int colIndex = 0; colIndex < lastCellNum; colIndex++) {
-                for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
-                    CellRangeAddress mergedRegion = sheet.getMergedRegion(i);
-                    if (mergedRegion.isInRange(rowIndex, colIndex)) {
-                        // Check if the merged region intersects with the current cell
-                        return true;
-                    }
-                }
+  private static boolean isCellMerged(Sheet sheet, int rowIndex, int columnIndex) {
+        for (CellRangeAddress mergedRegion : sheet.getMergedRegions()) {
+            if (rowIndex >= mergedRegion.getFirstRow() && rowIndex <= mergedRegion.getLastRow() &&
+                    columnIndex >= mergedRegion.getFirstColumn() && columnIndex <= mergedRegion.getLastColumn()) {
+                return true;
             }
         }
         return false;
