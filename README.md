@@ -63,6 +63,14 @@ public class ExcelEventReader {
                 nextIsString = cellType != null && cellType.equals("s");
                 currentCellValue.setLength(0);
             }
+              // Get row and column indices of the current cell
+        int colIdx = CellReference.convertColStringToIndex(attributes.getValue("r").replaceAll("[0-9]", ""));
+        int rowIdx = Integer.parseInt(attributes.getValue("r").replaceAll("[^0-9]", "")) - 1;
+
+        // Check if the current cell is merged
+        if (isCellMerged(rowIdx, colIdx)) {
+            System.out.println("This cell is part of a merged region.");
+        }
             // Clear contents cache
             lastContents = "";
         }
