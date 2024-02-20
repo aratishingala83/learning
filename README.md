@@ -1,59 +1,59 @@
-import org.apache.poi.ss.usermodel.*;
 
-public class CheckMergedCellsInRow {
+---
+---
+---
+----
+
+-----
 
 
-  private static boolean isCellMerged(Sheet sheet, int rowIndex, int columnIndex) {
-        for (CellRangeAddress mergedRegion : sheet.getMergedRegions()) {
-            if (rowIndex >= mergedRegion.getFirstRow() && rowIndex <= mergedRegion.getLastRow() &&
-                    columnIndex >= mergedRegion.getFirstColumn() && columnIndex <= mergedRegion.getLastColumn()) {
-                return true;
-            }
-        }
-        return false;
-    }
 
-public static boolean rowHasMergedCells(Sheet sheet, int rowIndex) {
-        Row row = sheet.getRow(rowIndex);
-        if (row != null) {
-            int lastCellNum = row.getLastCellNum();
-            for (int colIndex = 0; colIndex < lastCellNum; colIndex++) {
-                for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
-                    CellRangeAddress mergedRegion = sheet.getMergedRegion(i);
-                    if (mergedRegion.isInRange(rowIndex, colIndex)) {
-                        // Check if the merged region intersects with the current cell
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
 
-    
-    public static boolean rowHasMergedCells(Sheet sheet, int rowIndex) {
-        for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
-            CellRangeAddress mergedRegion = sheet.getMergedRegion(i);
-            if (mergedRegion.isInRange(rowIndex, mergedRegion.getFirstColumn())) {
-                // Check if the merged region intersects with the given row
-                return true;
-            }
-        }
-        return false;
-    }
-
+public class LargeExcelReader {
     public static void main(String[] args) {
-        // Example usage:
-        Workbook workbook = ... // Initialize your workbook (e.g., HSSFWorkbook or XSSFWorkbook)
-        Sheet sheet = workbook.getSheetAt(0); // Get the desired sheet
+        String excelFilePath = "path/to/your/large/file.xlsx";
 
-        int targetRow = 1; // Row index to check for merged cells
+        try (FileInputStream fis = new FileInputStream(excelFilePath);
+             Workbook workbook = new SXSSFWorkbook(new XSSFWorkbook(fis))) {
 
-        boolean hasMergedCells = rowHasMergedCells(sheet, targetRow);
-        if (hasMergedCells) {
-            System.out.println("Row " + targetRow + " contains merged cells.");
-        } else {
-            System.out.println("Row " + targetRow + " does not contain merged cells.");
+            Sheet sheet = workbook.getSheetAt(0); // Assuming the data is in the first sheet
+
+            // Get the merged regions
+            List<CellRangeAddress> mergedRegions = sheet.getMergedRegions();
+
+            for (Row row : sheet) {
+                for (Cell cell : row) {
+                    // Check if the cell is merged
+                    boolean isMerged = isCellMerged(mergedRegions, cell);
+                    if (isMerged) {
+                        System.out.print("Merged\t");
+                    } else {
+                        System.out.print("Not Merged\t");
+                    }
+
+                    // Process each cell as needed
+                    CellType cellType = cell.getCellType();
+                    if (cellType == CellType.STRING) {
+                        System.out.print(cell.getStringCellValue() + "\t");
+                    } else if (cellType == CellType.NUMERIC) {
+                        System.out.print(cell.getNumericCellValue() + "\t");
+                    } else if (cellType == CellType.BOOLEAN) {
+                        System.out.print(cell.getBooleanCellValue() + "\t");
+                    } // Handle other cell types as needed
+                }
+                System.out.println(); // Move to the next row
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
+
+    private static boolean isCellMerged(List<CellRangeAddress> mergedRegions, Cell cell) {
+        for (CellRangeAddress mergedRegion : mergedRegions) {
+            if (mergedRegion.isInRange(cell.getRowIndex(), cell.getColumnIndex())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
