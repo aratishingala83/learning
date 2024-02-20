@@ -1,9 +1,7 @@
-=============TESTING==========
-
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackageAccess;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.usermodel.SharedStringsTable;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.eventusermodel.XSSFReader;
 import org.apache.poi.xssf.model.SharedStringsTable;
 import org.apache.poi.xssf.model.StylesTable;
@@ -16,7 +14,6 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.util.List;
 
 public class ExcelEventReader {
 
@@ -27,14 +24,12 @@ public class ExcelEventReader {
 
         SharedStringsTable sharedStringsTable = reader.getSharedStringsTable();
         StylesTable stylesTable = reader.getStylesTable();
-        XSSFWorkbook workbook = new XSSFWorkbook(opcPackage);
-
-        InputStream sheetInputStream = reader.getSheet("rId1");
 
         XMLReader parser = XMLReaderFactory.createXMLReader("org.apache.xerces.parsers.SAXParser");
-        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable, workbook);
+        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable);
         parser.setContentHandler(sheetHandler);
 
+        InputStream sheetInputStream = reader.getSheet("rId1");
         InputSource sheetSource = new InputSource(sheetInputStream);
         parser.parse(sheetSource);
 
@@ -46,15 +41,13 @@ public class ExcelEventReader {
 
         private SharedStringsTable sharedStringsTable;
         private StylesTable stylesTable;
-        private Workbook workbook;
         private StringBuilder currentCellValue = new StringBuilder();
         private String lastContents;
         private boolean nextIsString;
 
-        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable, Workbook workbook) {
+        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable) {
             this.sharedStringsTable = sharedStringsTable;
             this.stylesTable = stylesTable;
-            this.workbook = workbook;
         }
 
         @Override
@@ -65,23 +58,11 @@ public class ExcelEventReader {
                 nextIsString = cellType != null && cellType.equals("s");
                 currentCellValue.setLength(0);
 
-                /**
-                 // Cell
-            String cellReference = attributes.getValue("r");
-            currentColumn = CellReference.convertColStringToIndex(cellReference.replaceAll("[0-9]", ""));
-            currentRow = Integer.parseInt(cellReference.replaceAll("[^0-9]", "")) - 1;
-            String cellType = attributes.getValue("t");
-            nextIsString = cellType != null && cellType.equals("s");
-            currentCellValue.setLength(0);**/
+                // Check if the current cell is part of a merged region
+                if (isCellMerged(attributes)) {
+                    System.out.println("Cell is part of a merged region.");
+                }
             }
-              // Get row and column indices of the current cell
-        int colIdx = CellReference.convertColStringToIndex(attributes.getValue("r").replaceAll("[0-9]", ""));
-        int rowIdx = Integer.parseInt(attributes.getValue("r").replaceAll("[^0-9]", "")) - 1;
-
-        // Check if the current cell is merged
-        if (isCellMerged(rowIdx, colIdx)) {
-            System.out.println("This cell is part of a merged region.");
-        }
             // Clear contents cache
             lastContents = "";
         }
@@ -96,7 +77,7 @@ public class ExcelEventReader {
 
             if (name.equals("v")) {
                 // Value of cell
-                System.out.println(currentCellValue.toString());
+                System.out.println("Cell value: " + currentCellValue.toString());
             }
         }
 
@@ -105,16 +86,10 @@ public class ExcelEventReader {
             lastContents += new String(ch, start, length);
         }
 
-        private boolean isCellMerged(int rowIndex, int columnIndex) {
-            Sheet sheet = workbook.getSheetAt(0); // Change the index if needed
-            for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
-                CellRangeAddress mergedRegion = sheet.getMergedRegion(i);
-                if (mergedRegion.isInRange(rowIndex, columnIndex)) {
-                    return true;
-                }
-            }
-            return false;
+        private boolean isCellMerged(Attributes attributes) {
+            // Implement your logic to check if the cell is part of a merged region
+            return false; // Placeholder return value
         }
     }
 }
-================
+===============
