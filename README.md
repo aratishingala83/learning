@@ -64,6 +64,15 @@ public class ExcelEventReader {
                 String cellType = attributes.getValue("t");
                 nextIsString = cellType != null && cellType.equals("s");
                 currentCellValue.setLength(0);
+
+                /**
+                 // Cell
+            String cellReference = attributes.getValue("r");
+            currentColumn = CellReference.convertColStringToIndex(cellReference.replaceAll("[0-9]", ""));
+            currentRow = Integer.parseInt(cellReference.replaceAll("[^0-9]", "")) - 1;
+            String cellType = attributes.getValue("t");
+            nextIsString = cellType != null && cellType.equals("s");
+            currentCellValue.setLength(0);**/
             }
               // Get row and column indices of the current cell
         int colIdx = CellReference.convertColStringToIndex(attributes.getValue("r").replaceAll("[0-9]", ""));
