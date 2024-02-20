@@ -1,7 +1,7 @@
-========================
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackageAccess;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.eventusermodel.XSSFReader;
 import org.apache.poi.xssf.model.SharedStringsTable;
 import org.apache.poi.xssf.model.StylesTable;
@@ -14,6 +14,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.List;
 
 public class ExcelEventReader {
 
@@ -24,11 +25,12 @@ public class ExcelEventReader {
 
         SharedStringsTable sharedStringsTable = reader.getSharedStringsTable();
         StylesTable stylesTable = reader.getStylesTable();
+        XSSFWorkbook workbook = new XSSFWorkbook(opcPackage);
 
         InputStream sheetInputStream = reader.getSheet("rId1");
 
         XMLReader parser = XMLReaderFactory.createXMLReader("org.apache.xerces.parsers.SAXParser");
-        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable);
+        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable, workbook);
         parser.setContentHandler(sheetHandler);
 
         InputSource sheetSource = new InputSource(sheetInputStream);
@@ -42,13 +44,15 @@ public class ExcelEventReader {
 
         private SharedStringsTable sharedStringsTable;
         private StylesTable stylesTable;
+        private Workbook workbook;
         private StringBuilder currentCellValue = new StringBuilder();
         private String lastContents;
         private boolean nextIsString;
 
-        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable) {
+        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable, Workbook workbook) {
             this.sharedStringsTable = sharedStringsTable;
             this.stylesTable = stylesTable;
+            this.workbook = workbook;
         }
 
         @Override
@@ -81,5 +85,17 @@ public class ExcelEventReader {
         public void characters(char[] ch, int start, int length) {
             lastContents += new String(ch, start, length);
         }
+
+        private boolean isCellMerged(int rowIndex, int columnIndex) {
+            Sheet sheet = workbook.getSheetAt(0); // Change the index if needed
+            for (int i = 0; i < sheet.getNumMergedRegions(); i++) {
+                CellRangeAddress mergedRegion = sheet.getMergedRegion(i);
+                if (mergedRegion.isInRange(rowIndex, columnIndex)) {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
+================
