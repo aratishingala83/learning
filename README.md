@@ -41,16 +41,24 @@ public class ExcelEventBasedReader {
                     inRow = true;
                     hasValue = false;
                 } else if (inRow && "c".equals(name)) {
-                    // Check if the cell has content
+                   // Check if the cell has content
                     String cellType = attributes.getValue("t");
+                    String cellRef = attributes.getValue("r");
+                    System.out.print("Cell Reference: " + cellRef + ", ");
                     if ("s".equals(cellType)) {
-                        hasValue = true; // String cell
+                        // String cell
+                        int idx = Integer.parseInt(attributes.getValue("s"));
+                        String cellValue = sharedStringsTable.getItemAt(idx).getString();
+                        System.out.println("Cell Value: " + cellValue);
                     } else if ("inlineStr".equals(cellType)) {
-                        hasValue = true; // Inline string cell
+                        // Inline string cell
+                        System.out.println("Inline String Cell Value: " + attributes.getValue("t"));
                     } else if ("n".equals(cellType)) {
-                        hasValue = true; // Numeric cell
+                        // Numeric cell
+                        System.out.println("Numeric Cell Value: " + attributes.getValue("v"));
                     } else if ("b".equals(cellType)) {
-                        hasValue = true; // Boolean cell
+                        // Boolean cell
+                        System.out.println("Boolean Cell Value: " + attributes.getValue("v"));
                     }
                 }
             }
