@@ -1,9 +1,9 @@
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackageAccess;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.eventusermodel.XSSFReader;
 import org.apache.poi.xssf.model.SharedStringsTable;
 import org.apache.poi.xssf.model.StylesTable;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -24,11 +24,10 @@ public class ExcelEventReader {
         SharedStringsTable sharedStringsTable = reader.getSharedStringsTable();
         StylesTable stylesTable = reader.getStylesTable();
 
-        XSSFWorkbook workbook = new XSSFWorkbook(reader);
         InputStream sheetInputStream = reader.getSheet("rId1");
 
         XMLReader parser = XMLReaderFactory.createXMLReader("org.apache.xerces.parsers.SAXParser");
-        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable, workbook);
+        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable);
         parser.setContentHandler(sheetHandler);
 
         InputSource sheetSource = new InputSource(sheetInputStream);
@@ -42,15 +41,13 @@ public class ExcelEventReader {
 
         private SharedStringsTable sharedStringsTable;
         private StylesTable stylesTable;
-        private XSSFWorkbook workbook;
         private StringBuilder currentCellValue = new StringBuilder();
         private String lastContents;
         private boolean nextIsString;
 
-        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable, XSSFWorkbook workbook) {
+        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable) {
             this.sharedStringsTable = sharedStringsTable;
             this.stylesTable = stylesTable;
-            this.workbook = workbook;
         }
 
         @Override
