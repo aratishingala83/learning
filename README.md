@@ -87,8 +87,24 @@ public class ExcelEventReader {
         }
 
         private boolean isCellMerged(Attributes attributes) {
-            // Implement your logic to check if the cell is part of a merged region
-            return false; // Placeholder return value
+            // Get the cell reference (e.g., "A1", "B3", etc.)
+    String cellReference = attributes.getValue("r");
+    
+    // Convert the cell reference to row and column indices
+    int colIndex = CellReference.convertColStringToIndex(cellReference.replaceAll("[0-9]", ""));
+    int rowIndex = Integer.parseInt(cellReference.replaceAll("[^0-9]", "")) - 1;
+    
+    // Iterate through all merged regions in the sheet
+    for (int i = 0; i < stylesTable.getSheet().getNumMergedRegions(); i++) {
+        CellRangeAddress mergedRegion = stylesTable.getSheet().getMergedRegion(i);
+        
+        // Check if the current cell falls within any merged region
+        if (mergedRegion.isInRange(rowIndex, colIndex)) {
+            return true; // Current cell is part of a merged region
+        }
+    }
+    
+    return false; // Current cell is not part of any merged region
         }
     }
 }
