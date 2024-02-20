@@ -75,3 +75,87 @@ public class ReadLargeExcelFileWithSAX {
         }
     }
 }
+
+
+
+
+===============
+
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.openxml4j.opc.PackageAccess;
+import org.apache.poi.ss.usermodel.*;
+
+public class ExcelEventReader {
+
+    public static void main(String[] args) throws Exception {
+        String excelFilePath = "path/to/your/excel/file.xlsx";
+        InputStream inputStream = new FileInputStream(excelFilePath);
+        OPCPackage opcPackage = OPCPackage.open(inputStream);
+
+        XSSFReader reader = new XSSFReader(opcPackage);
+        SharedStringsTable sharedStringsTable = reader.getSharedStringsTable();
+
+        StylesTable stylesTable = reader.getStylesTable();
+
+        XMLReader parser = XMLReaderFactory.createXMLReader("org.apache.xerces.parsers.SAXParser");
+        SheetHandler sheetHandler = new SheetHandler(sharedStringsTable, stylesTable);
+        parser.setContentHandler(sheetHandler);
+
+        InputStream sheetInputStream = reader.getSheet("rId1");
+        InputSource sheetSource = new InputSource(sheetInputStream);
+        parser.parse(sheetSource);
+
+        sheetInputStream.close();
+        opcPackage.close();
+    }
+
+    private static class SheetHandler extends DefaultHandler {
+
+        private SharedStringsTable sharedStringsTable;
+        private StylesTable stylesTable;
+        private StringBuffer currentCellValue = new StringBuffer();
+        private String lastContents;
+        private boolean nextIsString;
+
+        public SheetHandler(SharedStringsTable sharedStringsTable, StylesTable stylesTable) {
+            this.sharedStringsTable = sharedStringsTable;
+            this.stylesTable = stylesTable;
+        }
+
+        @Override
+        public void startElement(String uri, String localName, String name, Attributes attributes) {
+            if (name.equals("c")) {
+                // Cell
+                String cellType = attributes.getValue("t");
+                nextIsString = cellType != null && cellType.equals("s");
+                currentCellValue.setLength(0);
+            }
+            // Clear contents cache
+            lastContents = "";
+        }
+
+        @Override
+        public void endElement(String uri, String localName, String name) {
+            if (nextIsString) {
+                int idx = Integer.parseInt(lastContents);
+                currentCellValue.append(sharedStringsTable.getItemAt(idx).toString());
+                nextIsString = false;
+            }
+
+            if (name.equals("v")) {
+                // Value of cell
+                System.out.println(currentCellValue.toString());
+            }
+        }
+
+        @Override
+        public void characters(char[] ch, int start, int length) {
+            lastContents += new String(ch, start, length);
+        }
+    }
+}
+
