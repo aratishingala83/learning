@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 
 private static class SheetHandler extends DefaultHandler {
     private final SharedStringsTable sst;
@@ -7,6 +8,8 @@ private static class SheetHandler extends DefaultHandler {
     private StringBuilder lastContents = new StringBuilder();
     private boolean inMergeCell;
     private boolean isMerged;
+    private int currentRow;
+    private int mergedCellsAtStartOfRowCount;
     private Map<Integer, Integer> mergedCellsAtStartOfRow = new HashMap<>();
 
     private SheetHandler(SharedStringsTable sst) {
@@ -21,6 +24,16 @@ private static class SheetHandler extends DefaultHandler {
         } else if (name.equals("mergeCell")) {
             inMergeCell = true;
             isMerged = true;
+            if (currentRow > 0) {
+                mergedCellsAtStartOfRow.put(currentRow, mergedCellsAtStartOfRowCount);
+            }
+            mergedCellsAtStartOfRowCount++;
+        } else if (name.equals("row")) {
+            if (currentRow > 0) {
+                mergedCellsAtStartOfRow.put(currentRow, mergedCellsAtStartOfRowCount);
+            }
+            currentRow++;
+            mergedCellsAtStartOfRowCount = 0;
         } else {
             inMergeCell = false;
         }
@@ -43,17 +56,6 @@ private static class SheetHandler extends DefaultHandler {
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         lastContents.append(ch, start, length);
-    }
-
-    @Override
-    public void endRow(int rowNum) throws SAXException {
-        if (isMerged) {
-            if (!mergedCellsAtStartOfRow.containsKey(rowNum)) {
-                mergedCellsAtStartOfRow.put(rowNum, 0);
-            }
-            mergedCellsAtStartOfRow.put(rowNum, mergedCellsAtStartOfRow.get(rowNum) + 1);
-        }
-        isMerged = false;
     }
 
     public Map<Integer, Integer> getMergedCellsAtStartOfRow() {
