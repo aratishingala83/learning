@@ -1,64 +1,53 @@
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.poi.xssf.usermodel.XSSFRichTextString;
+import org.springframework.http.client.ClientHttpRequestFactory;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
+import javax.net.ssl.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.*;
+import java.security.cert.CertificateException;
 
-private static class SheetHandler extends DefaultHandler {
-    private final SharedStringsTable sst;
-    private boolean nextIsString;
-    private StringBuilder lastContents = new StringBuilder();
-    private boolean inMergeCell;
-    private boolean isMerged;
-    private int currentRow;
-    private int mergedCellsAtStartOfRowCount;
-    private Map<Integer, Integer> mergedCellsAtStartOfRow = new HashMap<>();
+public class Main {
 
-    private SheetHandler(SharedStringsTable sst) {
-        this.sst = sst;
+    public static void main(String[] args) throws Exception {
+        SSLContext sslContext = createSSLContext("path/to/your/keystore.jks", "your_keystore_password");
+
+        RestTemplate restTemplate = new RestTemplate(getClientHttpRequestFactory(sslContext));
+
+        // Use the RestTemplate to make HTTPS calls
+        String url = "https://example.com/api/endpoint";
+        String response = restTemplate.getForObject(url, String.class);
+        System.out.println("Response: " + response);
     }
 
-    @Override
-    public void startElement(String uri, String localName, String name, Attributes attributes) throws SAXException {
-        if (name.equals("c")) {
-            String cellType = attributes.getValue("t");
-            nextIsString = cellType != null && cellType.equals("s");
-        } else if (name.equals("mergeCell")) {
-            inMergeCell = true;
-            isMerged = true;
-            if (currentRow > 0) {
-                mergedCellsAtStartOfRow.put(currentRow, mergedCellsAtStartOfRowCount);
-            }
-            mergedCellsAtStartOfRowCount++;
-        } else if (name.equals("row")) {
-            if (currentRow > 0) {
-                mergedCellsAtStartOfRow.put(currentRow, mergedCellsAtStartOfRowCount);
-            }
-            currentRow++;
-            mergedCellsAtStartOfRowCount = 0;
-        } else {
-            inMergeCell = false;
+    private static SSLContext createSSLContext(String keystorePath, String keystorePassword) throws KeyStoreException, IOException, NoSuchAlgorithmException, CertificateException, UnrecoverableKeyException, KeyManagementException {
+        KeyStore keyStore = KeyStore.getInstance("JKS");
+        try (InputStream keyStoreInputStream = new FileInputStream(keystorePath)) {
+            keyStore.load(keyStoreInputStream, keystorePassword.toCharArray());
         }
-        lastContents.setLength(0);
+
+        KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+        keyManagerFactory.init(keyStore, keystorePassword.toCharArray());
+
+        TrustManager[] trustAllCerts = new TrustManager[] {
+            new X509TrustManager() {
+                public void checkClientTrusted(java.security.cert.X509Certificate[] certs, String authType) {}
+                public void checkServerTrusted(java.security.cert.X509Certificate[] certs, String authType) {}
+                public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                    return null;
+                }
+            }
+        };
+
+        SSLContext sslContext = SSLContext.getInstance("TLS");
+        sslContext.init(keyManagerFactory.getKeyManagers(), trustAllCerts, new SecureRandom());
+        return sslContext;
     }
 
-    @Override
-    public void endElement(String uri, String localName, String name) throws SAXException {
-        if (nextIsString) {
-            int idx = Integer.parseInt(lastContents.toString());
-            lastContents.setLength(0);
-            nextIsString = false;
-            XSSFRichTextString v = new XSSFRichTextString(sst.getEntryAt(idx));
-            System.out.println("String Cell Value: " + v.toString() + ", Merged: " + isMerged);
-        } else if (name.equals("v")) {
-            System.out.println("Numeric Cell Value: " + lastContents.toString() + ", Merged: " + isMerged);
-        }
-    }
-
-    @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
-        lastContents.append(ch, start, length);
-    }
-
-    public Map<Integer, Integer> getMergedCellsAtStartOfRow() {
-        return mergedCellsAtStartOfRow;
+    private static ClientHttpRequestFactory getClientHttpRequestFactory(SSLContext sslContext) {
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setSslContext(sslContext);
+        return factory;
     }
 }
