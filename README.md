@@ -25,3 +25,28 @@ public class SSLContextHelper {
         return sslContext;
     }
 }
+
+
+
+
+static class ResponseInterceptor implements org.springframework.http.client.ClientHttpResponseInterceptor {
+        private final CookieStore cookieStore;
+
+        public ResponseInterceptor(CookieStore cookieStore) {
+            this.cookieStore = cookieStore;
+        }
+
+        @Override
+        public void afterPropertiesSet() throws Exception {
+        }
+
+        @Override
+        public ClientHttpResponse intercept(org.springframework.http.HttpRequest request, byte[] body,
+                                            ClientHttpRequestExecution execution) throws IOException {
+            // Intercept the response
+            ClientHttpResponse response = execution.execute(request, body);
+            // Extract and update cookies from the response
+            cookieStore.addCookie(new BasicHttpClientCookie("example_cookie", "example_value")); // Replace with actual cookie extraction logic
+            return response;
+        }
+    }
