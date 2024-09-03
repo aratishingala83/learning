@@ -2,7 +2,20 @@
 
 
 ---------------------
-
+SELECT
+    s.sid,
+    s.serial#,
+    s.username,
+    s.status,
+    s.osuser,
+    s.machine AS hostname,
+    s.program,
+    s.logon_time
+FROM
+    v$session s
+WHERE
+    s.status = 'ACTIVE'
+    AND s.machine = '<hostname>';
 -------------------
 
 --------------------
