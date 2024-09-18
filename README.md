@@ -1,4 +1,25 @@
 
+SELECT 
+    ac1.TABLE_NAME AS child_table,
+    acc1.COLUMN_NAME AS child_column,
+    ac2.TABLE_NAME AS parent_table,
+    acc2.COLUMN_NAME AS parent_column
+FROM 
+    ALL_CONSTRAINTS ac1
+JOIN 
+    ALL_CONS_COLUMNS acc1 ON ac1.CONSTRAINT_NAME = acc1.CONSTRAINT_NAME
+JOIN 
+    ALL_CONSTRAINTS ac2 ON ac1.R_CONSTRAINT_NAME = ac2.CONSTRAINT_NAME
+JOIN 
+    ALL_CONS_COLUMNS acc2 ON ac2.CONSTRAINT_NAME = acc2.CONSTRAINT_NAME
+WHERE 
+    ac1.CONSTRAINT_TYPE = 'R'  -- 'R' stands for referential integrity (foreign key)
+ORDER BY 
+    ac1.TABLE_NAME, acc1.COLUMN_NAME;
+
+
+
+
 
 
 ---------------------
