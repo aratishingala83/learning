@@ -1,9 +1,9 @@
 
 SELECT 
-    ac1.TABLE_NAME AS child_table,
-    acc1.COLUMN_NAME AS child_column,
-    ac2.TABLE_NAME AS parent_table,
-    acc2.COLUMN_NAME AS parent_column
+    acc1.TABLE_NAME AS referencing_table, 
+    acc1.COLUMN_NAME AS referencing_column, 
+    ac2.TABLE_NAME AS referenced_table, 
+    acc2.COLUMN_NAME AS referenced_column
 FROM 
     ALL_CONSTRAINTS ac1
 JOIN 
@@ -13,9 +13,12 @@ JOIN
 JOIN 
     ALL_CONS_COLUMNS acc2 ON ac2.CONSTRAINT_NAME = acc2.CONSTRAINT_NAME
 WHERE 
-    ac1.CONSTRAINT_TYPE = 'R'  -- 'R' stands for referential integrity (foreign key)
+    ac2.CONSTRAINT_TYPE = 'P'  -- 'P' stands for primary key
+    AND ac1.CONSTRAINT_TYPE = 'R'  -- 'R' stands for referential integrity (foreign key)
+    AND ac2.TABLE_NAME = 'YOUR_TABLE_NAME'  -- Replace with your table name containing the primary key
 ORDER BY 
-    ac1.TABLE_NAME, acc1.COLUMN_NAME;
+    acc1.TABLE_NAME, acc1.COLUMN_NAME;
+
 
 
 
