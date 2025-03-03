@@ -19,6 +19,11 @@ WHERE
 ORDER BY 
     acc1.TABLE_NAME, acc1.COLUMN_NAME;
 
+===============
+function validateNumber(value) {
+  let num = parseFloat(value);
+  return !isNaN(num) && num > 0;
+}
 
 ===============
 function validatePositiveNumber(value) {
