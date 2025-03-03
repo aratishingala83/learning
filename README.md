@@ -20,7 +20,21 @@ ORDER BY
     acc1.TABLE_NAME, acc1.COLUMN_NAME;
 
 
+===============
+function validatePositiveNumber(value) {
+  // Regular Expression to match positive integers or positive fractional numbers
+  let regex = /^[+]?\d*\.?\d+$/;
 
+  if (regex.test(value)) {
+    console.log("Valid Positive Number");
+    return true;
+  } else {
+    console.log("Invalid Number");
+    return false;
+  }
+}
+
+===============
 
 
 
